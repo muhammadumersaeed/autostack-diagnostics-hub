@@ -9,7 +9,8 @@ const VideoShowcase = () => {
       title: "Introducing Autostack Vehicle Diagnostics",
       duration: "2:34",
       thumbnail: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80",
-      description: "A quick overview of our diagnostics platform and key features"
+      description: "A quick overview of our diagnostics platform and key features",
+      youtubeId: "PO9E_ws4CqE"
     },
     {
       title: "Live Demo: OBD2 Diagnostics",
@@ -37,20 +38,14 @@ const VideoShowcase = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
           <div className="relative rounded-xl overflow-hidden card-shadow aspect-video bg-black">
-            <img 
-              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1200&q=80" 
-              alt="Featured video thumbnail" 
-              className="w-full h-full object-cover opacity-80"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Button className="w-16 h-16 rounded-full bg-autostack-600 hover:bg-autostack-700 flex items-center justify-center">
-                <Play className="h-8 w-8 text-white" fill="white" />
-              </Button>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-              <h3 className="text-white text-2xl font-bold">Featured: Complete Diagnostic Walkthrough</h3>
-              <p className="text-white/80">A comprehensive demo of Autostack's diagnostic capabilities across platforms</p>
-            </div>
+            <iframe 
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/PO9E_ws4CqE`} 
+              title="Autostack Vehicle Diagnostics"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+            ></iframe>
           </div>
           
           <div className="space-y-6">
