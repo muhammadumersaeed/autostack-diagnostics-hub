@@ -2,6 +2,7 @@
 import React from 'react';
 import { Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const VideoShowcase = () => {
   const videos = [
@@ -74,8 +75,8 @@ const VideoShowcase = () => {
                 </div>
               ))}
             </div>
-            <Button variant="outline" className="border-autostack-200 hover:bg-autostack-50">
-              View All Videos
+            <Button variant="outline" className="border-autostack-200 hover:bg-autostack-50" asChild>
+              <Link to="/videos">View All Videos</Link>
             </Button>
           </div>
         </div>
@@ -86,9 +87,27 @@ const VideoShowcase = () => {
             Our team can provide personalized demonstrations for your specific vehicle types, 
             diagnostic needs, or integration requirements.
           </p>
-          <Button className="bg-autostack-600 hover:bg-autostack-700">
-            Request Custom Demo
-          </Button>
+          <div className="space-y-4">
+            <Button className="bg-autostack-600 hover:bg-autostack-700">
+              Request Custom Demo
+            </Button>
+            
+            <div className="pt-4 border-t border-gray-200 mt-4">
+              <h4 className="font-semibold mb-2">Contact our demo specialists directly:</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+                <div>
+                  <p className="font-medium">Umer Saeed</p>
+                  <a href="mailto:umersaeed.uet@gmail.com" className="text-autostack-600 hover:underline block">umersaeed.uet@gmail.com</a>
+                  <a href="https://wa.me/923157071441" className="text-autostack-600 hover:underline block">+923157071441 (WhatsApp)</a>
+                </div>
+                <div>
+                  <p className="font-medium">Ammar Saeed</p>
+                  <a href="mailto:ammarsaeed.tuf@gmail.com" className="text-autostack-600 hover:underline block">ammarsaeed.tuf@gmail.com</a>
+                  <a href="https://wa.me/923338887617" className="text-autostack-600 hover:underline block">+923338887617 (WhatsApp)</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
